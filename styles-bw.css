@@ -1,0 +1,126 @@
+/* Переменные для цветов */
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    /* Убрали красный цвет */
+    --color-accent: #FFFFFF; /* Акцент теперь белый */
+    --font-mono: 'Inconsolata', monospace;
+}
+
+/* Базовый сброс и стиль */
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-mono);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #AAAAAA; /* Чуть серый при наведении */
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    color: var(--color-accent); /* Теперь белый */
+    letter-spacing: 5px;
+}
+
+/* Навигация (остается такой же, как в черном/белом) */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: fixed;
+    width: 90%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* ... (остальные стили навигации) ... */
+
+/* Основные секции */
+.hero-section {
+    /* ... (стили) ... */
+    border-bottom: 2px solid var(--color-accent); /* Белая линия */
+}
+
+.content-section {
+    /* ... (стили) ... */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Светло-серая линия */
+}
+
+/* Кнопка CTA (Call to Action) */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border: 2px solid var(--color-accent); /* Белая рамка */
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+}
+
+/* --- ЭФФЕКТ 1: ГЛИТЧ-ТЕКСТ (Адаптация) --- */
+/* Теперь глитч будет использовать белый и более светлый серый/фон */
+.glitch-text::before {
+    color: #888888; /* Более светлый серый для одной тени */
+    opacity: 0;
+}
+
+.glitch-text::after {
+    color: var(--color-white); /* Белый для другой тени */
+    opacity: 0;
+}
+/* Анимации glitch-anim-1 и glitch-anim-2 остаются прежними */
+
+/* --- ЭФФЕКТ 2: ПОРТФОЛИО С МАСКОЙ/ТЕНЬЮ (Адаптация) --- */
+.portfolio-item img {
+    filter: grayscale(100%); /* Все изображения черно-белые */
+    transition: filter 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    filter: grayscale(100%); /* Изображение остается черно-белым, чтобы сохранить строгость */
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* БЕЛАЯ маска */
+    color: var(--color-black);
+    /* ... (стили) ... */
+}
+
+.overlay h3 {
+    color: var(--color-black);
+}
+
+.overlay p {
+    color: var(--color-black);
+}
+
+/* Футер */
+footer {
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 2px solid var(--color-accent);
+    margin-top: 50px;
+    color: var(--color-accent);
+    font-size: 0.9em;
+}
+
+/* --- СНЕГ (Стили остаются, так как они уже BW) --- */
+/* ... (вставьте сюда стили для снега из предыдущего раздела, если хотите) ... */
